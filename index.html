@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="src/img/logo.svg" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -10,16 +11,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="src/assets/styles/default.css" />
-    <link rel="stylesheet" href="src/assets/styles/header.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="src/styles/default.css" />
+    <link rel="stylesheet" href="src/styles/header.css" />
+    <link rel="stylesheet" href="src/styles/home.css" />
     <title>NutriScore - Calcule agora seus macronutrientes!</title>
   </head>
   <body>
     <header>
       <nav id="navbar">
         <div id="logo">
-          <img src="src/assets/img/logo.svg" alt="Logo-NutriScore" id="nav-logo"/>
+          <img src="src/img/logo.svg" alt="Logo-NutriScore" id="nav-logo" />
           NUTRI<span>SCORE</span>
         </div>
 
@@ -28,7 +35,7 @@
             <a href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#howItWorks">Como Usar</a>
+            <a href="#ebook">E-Book</a>
           </li>
           <li class="nav-item">
             <a href="#about">Sobre</a>
@@ -45,11 +52,11 @@
 
       <div id="mobile-menu">
         <ul id="mobile-nav-list">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#howItWorks">Como Usar</a>
+            <a href="#ebook">E-Book</a>
           </li>
           <li class="nav-item">
             <a href="#about">Sobre</a>
@@ -60,6 +67,61 @@
         </ul>
       </div>
     </header>
-  <script src="src/assets/js/script.js"></script>
+
+    <main id="content">
+      <section id="home">
+        <div id="cta">
+          <h1 class="title">
+            CALCULE AGORA SEUS
+            <span>MACROS</span>
+          </h1>
+          <p class="description">
+            Acesse a Calculadora de Macronutrientes e descubra a melhor forma de
+            se alimentar para alcançar seus objetivos.
+          </p>
+
+          <div id="cta-btn">
+            <a href="#" class="btn-default"> Calcular Agora! </a>
+          </div>
+        </div>
+
+        <div id="banner">
+          <img src="src/img/banner-img.png" alt="banner" />
+        </div>
+      </section>
+
+      <section id="ebook">
+        <h2 class="section-title">E-BOOKs</h2>
+        <h3 class="section-subtitle">Confira os novos E-BOOKs</h3>
+
+        <div class="ebooks">
+          <div class="ebook-star">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <a href="#">
+            <img src="" alt="ebook_1" class="ebook-image" />
+          </a>
+
+          <h3 class="ebook-title">
+            Guia de Hipertrofia
+          </h3>
+
+          <span class="ebook-description">
+            Aprenda a treinar e se alimentar para ganhar massa muscular.
+          </span>
+
+          <div class="ebook-rate">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>(500+)</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/js/script.js"></script>
   </body>
 </html>
