@@ -43,8 +43,12 @@
   border-radius: 0px 37.5px 0px 42.5px;
 }
 
+.ebook-image {
+  border-radius: 20px;
+}
+
 .ebook-title {
-    color: #434343;
+  color: #434343;
 }
 
 .ebook-description {
@@ -63,7 +67,7 @@
 }
 
 .ebook-price h4 {
-    color: #434343;
+  color: #434343;
 }
 
 @media screen and (max-width: 1170px) {
@@ -77,8 +81,12 @@
   }
 
   .ebook-image {
+    border-radius: 20px;
     width: 50%;
     height: 170px;
+  }
+  #shelf .section-subtitle {
+    text-align: center;
   }
 }
 
@@ -87,7 +95,7 @@
     width: 100%;
   }
 
-  #menu .section-subtitle {
+  #shelf .section-subtitle {
     text-align: center;
   }
 }
