@@ -61,6 +61,10 @@
   color: #05ff00;
 }
 
+.ebook-rate span {
+  font-weight: 700;
+}
+
 .ebook-price {
   display: flex;
   align-items: center;
