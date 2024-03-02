@@ -1,24 +1,26 @@
 $(document).ready(function () {
-  $("#mobile-btn").on("click", function () {
-    $("#mobile-menu").toggleClass("active");
-    $("#mobile-btn").find("i").toggleClass("fa-x");
-  });
-
+  const mobileBtn = $("#mobile-btn");
+  const mobileMenu = $("#mobile-menu");
   const sections = $("section");
   const navItems = $(".nav-item");
+  const header = $("header");
+
+  mobileBtn.on("click", function () {
+    mobileMenu.toggleClass("active");
+    mobileBtn.find("i").toggleClass("fa-x");
+  });
 
   $(window).on("scroll", function () {
-    const header = $("header");
-
-    let activeSectionIndex = 0;
-
     const scrollPosition = $(window).scrollTop() - header.outerHeight();
+    const boxShadow = scrollPosition <= 0 ? "none" : "5px 1px 5px rgba(255, 255, 255, 0.1)";
+    header.css("box-shadow", boxShadow);
 
-    if (scrollPosition <= 0) {
-      header.css("box-shadow", "none");
-    } else {
-      header.css("box-shadow", "5px 1px 5px rgba(255, 255, 255, 0.1)");
-    }
+    let activeSectionIndex = findActiveSectionIndex(scrollPosition);
+    updateActiveNavItem(activeSectionIndex);
+  });
+
+  function findActiveSectionIndex(scrollPosition) {
+    let activeSectionIndex = 0;
 
     sections.each(function (i) {
       const section = $(this);
@@ -31,43 +33,22 @@ $(document).ready(function () {
       }
     });
 
+    return activeSectionIndex;
+  }
+
+  function updateActiveNavItem(activeSectionIndex) {
     navItems.removeClass("active");
     $(navItems[activeSectionIndex]).addClass("active");
-  });
+  }
 
-  ScrollReveal().reveal("#cta", {
-    origin: "left",
-    duration: 2000,
+  const revealOptions = {
+    duration: 3000,
     distance: '20%'
-  });
-  
-  ScrollReveal().reveal("#banner", {
-    origin: "right",
-    duration: 2000,
-    distance: '20%'
-  });
+  };
 
-  ScrollReveal().reveal("#shelf", {
-    origin: "bottom",
-    duration: 2000,
-    distance: '20%'
-  });
-
-  ScrollReveal().reveal("#ebooks", {
-    origin: "bottom",
-    duration: 2000,
-    distance: '20%'
-  });
-
-  ScrollReveal().reveal("#about", {
-    origin: "bottom",
-    duration: 2000,
-    distance: '20%'
-  });
-
-  ScrollReveal().reveal("#infos", {
-    origin: "bottom",
-    duration: 2000,
-    distance: '20%'
-  });
+  ScrollReveal().reveal("#cta", { ...revealOptions, origin: "left" });
+  ScrollReveal().reveal("#banner", { ...revealOptions, origin: "right" });
+  ScrollReveal().reveal("#shelf", { ...revealOptions, origin: "bottom" });
+  ScrollReveal().reveal("#ebooks", { ...revealOptions, origin: "bottom" });
+  ScrollReveal().reveal("#about, #infos", { ...revealOptions, origin: "bottom" });
 });
