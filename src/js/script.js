@@ -55,7 +55,8 @@ $(document).ready(function () {
 
   ScrollReveal().reveal("#ebooks", {
     origin: "bottom",
-    duration: 6000
+    duration: 2000,
+    distance: '20%'
   });
 
   ScrollReveal().reveal("#about", {
