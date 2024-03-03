@@ -6,6 +6,12 @@ $(document).ready(function () {
   const header = $("header");
 
   mobileBtn.on("click", function () {
+    if (mobileMenu.hasClass("active")) {
+      mobileMenu.animate({ height: "toggle", opacity: "toggle" }, 300);
+    } else {
+      mobileMenu.animate({ height: "toggle", opacity: "toggle" }, 300);
+    }
+
     mobileMenu.toggleClass("active");
     mobileBtn.find("i").toggleClass("fa-x");
   });
