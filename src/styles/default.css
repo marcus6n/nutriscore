@@ -19,7 +19,6 @@ body {
 
 section {
   padding: 26px 8%;
-  min-height: calc(100vh - 102.67px);
 }
 
 span {

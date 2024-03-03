@@ -1,6 +1,7 @@
 #home {
   display: flex;
   position: relative;
+  min-height: calc(100vh - 102.67px);
 }
 
 #cta {
