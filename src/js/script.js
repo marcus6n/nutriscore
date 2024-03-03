@@ -42,7 +42,7 @@ $(document).ready(function () {
   }
 
   const revealOptions = {
-    duration: 3000,
+    duration: 2500,
     distance: '20%'
   };
 
